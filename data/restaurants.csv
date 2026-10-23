@@ -1,0 +1,41 @@
+id,name,cuisine,delivery_time_min,price_tier,is_vegetarian,is_vegan,is_gluten_free,rating
+1,Bombay Spice House,Indian,28,2,true,true,true,4.6
+2,Slice & Fire Pizza,Pizza,22,1,true,false,false,4.2
+3,Green Bowl Kitchen,Salads,16,2,true,true,true,4.7
+4,Smokestack Burger Co.,Burgers,19,1,false,false,false,4.1
+5,Bangkok Street Kitchen,Thai,34,2,true,false,true,4.4
+6,Casa Oaxaca Taqueria,Mexican,25,1,true,false,false,4.3
+7,Trattoria Nonna Lucia,Italian,42,3,true,false,false,4.5
+8,Golden Dragon Palace,Chinese,38,4,false,false,false,3.8
+9,Sakura Omakase Bar,Japanese,48,4,false,false,true,4.8
+10,Olive & Ember Mezze,Mediterranean,30,2,true,true,false,4.0
+11,Rooted Plant Kitchen,Vegan,21,3,true,true,true,4.6
+12,Blitz Wings & Burgers,Burgers,14,1,false,false,false,3.7
+13,Pie Society Pizzeria,Pizza,36,3,true,false,false,4.4
+14,Maple Tavern Grill,American,27,3,false,false,false,4.2
+15,Chiang Mai Noodle Bar,Thai,20,1,false,true,false,4.3
+16,Saffron Tandoor Grill,Indian,47,4,true,false,false,4.5
+17,Leafline Salad Co.,Salads,13,1,true,false,true,4.0
+18,Big Easy Smokehouse,American,52,4,false,false,false,4.7
+19,Tokyo Ramen Works,Japanese,29,2,false,false,false,4.1
+20,El Fuego Cantina,Mexican,46,3,false,false,false,3.6
+21,Il Forno Napoletano,Pizza,31,4,true,false,false,4.9
+22,Jade Garden Dim Sum,Chinese,33,3,false,false,false,4.3
+23,Aegean Table,Mediterranean,44,4,true,false,true,4.6
+24,Sprout & Seed,Vegan,26,2,false,true,true,4.4
+25,Stadium Smash Burgers,Burgers,18,2,false,false,false,4.2
+26,Pad Thai Republic,Thai,23,3,true,true,false,3.9
+27,Uptown Steak & Chop,American,55,4,false,false,false,4.8
+28,Mumbai Express Kitchen,Indian,17,1,true,true,false,3.9
+29,Via Roma Pasta Bar,Italian,24,2,true,false,false,4.1
+30,Wok This Way,Chinese,15,1,false,false,false,3.6
+31,Kin Sushi & Robata,Japanese,39,3,false,false,true,4.5
+32,Barrio Bowls,Mexican,21,2,true,true,true,4.2
+33,Harvest Crunch Salads,Salads,32,3,true,false,false,3.8
+34,Fire & Vine Wood Oven,Italian,50,4,false,false,false,4.7
+35,Liberty Diner,American,12,1,false,false,false,3.7
+36,Cedar & Lemon Grill,Mediterranean,26,1,false,false,false,4.1
+37,Tofu Temple,Vegan,35,4,false,true,false,4.3
+38,Double Stack Burger Bar,Burgers,41,3,false,false,false,3.9
+39,Pizza Pronto Express,Pizza,45,2,false,false,false,3.8
+40,Hanami Poke & Sushi,Japanese,19,4,false,false,true,4.4
