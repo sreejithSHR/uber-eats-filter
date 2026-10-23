@@ -28,10 +28,14 @@ export type NonEmptyList<T> = [T, ...T[]];
 
 /** The diner's filter choices. Each group is null when nothing is picked in it. */
 export interface FilterState {
-  delivery: DeliveryLimit | null;
+  /** Passes at or under the largest selected limit (chips OR together). */
+  delivery: NonEmptyList<DeliveryLimit> | null;
+  /** Passes when the band is one of the selected chips. */
   price: NonEmptyList<PriceBand> | null;
+  /** Passes only when every selected tag is yes in the data. */
   dietary: NonEmptyList<DietaryTag> | null;
-  rating: RatingMin | null;
+  /** Passes at or above the lowest selected minimum (chips OR together). */
+  rating: NonEmptyList<RatingMin> | null;
 }
 
 /** Starting state: nothing selected in every group. */

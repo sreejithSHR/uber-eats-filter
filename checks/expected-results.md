@@ -16,3 +16,9 @@ Worked out by hand, row by row, against all 40 listings in `data/restaurants.csv
 | 2 | Vegetarian + 30 min or less + $ or $$ + 4.0+ (all four groups) | Bombay Spice House, Slice & Fire Pizza, Green Bowl Kitchen, Casa Oaxaca Taqueria, Olive & Ember Mezze, Leafline Salad Co., Via Roma Pasta Bar, Barrio Bowls | 8 | **Leafline Salad Co.** and **Olive & Ember Mezze** rate exactly 4.0 and stay under 4.0+; Mumbai Express Kitchen (3.9) is the one that drops out. |
 | 3 | Vegetarian + 30 min or less (row 1 with price dropped) | Bombay Spice House, Slice & Fire Pizza, Green Bowl Kitchen, Casa Oaxaca Taqueria, Olive & Ember Mezze, Rooted Plant Kitchen, Leafline Salad Co., Pad Thai Republic, Mumbai Express Kitchen, Via Roma Pasta Bar, Barrio Bowls | 11 | 11 ≥ 9, as dropping a filter must never shrink the list; the two added are Rooted Plant Kitchen and Pad Thai Republic ($$$). |
 | 4 | 20 min or less + 4.5+ + $ | none | 0 | Green Bowl Kitchen (16 min, 4.7) passes time and rating but is $$, so it is out; no other place at 20 min or less rates 4.5+. This row tests the empty state. |
+
+**Extra check (two dietary chips):** none of the four rows above selects two dietary tags, so this row forces the rule that every selected tag must be yes.
+
+| # | Active filters | Restaurants that stay (data order) | Count | Borderline note |
+|---|---|---|---|---|
+| 5 | Vegetarian + Gluten-free | Bombay Spice House, Green Bowl Kitchen, Bangkok Street Kitchen, Rooted Plant Kitchen, Leafline Salad Co., Aegean Table, Barrio Bowls | 7 | Slice & Fire Pizza is vegetarian but not gluten-free, so it is out; a filter that keeps places with either tag would show 22. |
