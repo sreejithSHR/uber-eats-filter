@@ -4,6 +4,9 @@ A Next.js (App Router) + TypeScript page that renders the 40-restaurant Game-Day
 
 ![All 40 restaurant cards](docs/all-40-cards.png)
 
+## Checks
+- [Expected-results check table](checks/expected-results.md): four hand-worked filter stacks with names and counts, used to judge the filter code.
+
 ## Data
 - `data/restaurants.csv` is the Uber Eats Game-Day Restaurant Set, committed as-is and read from the project folder at build time (`lib/restaurants.ts`). Nothing is hand-typed or fetched from the web.
 - Every row is validated while loading: unknown price tiers or non true/false flags fail the build instead of rendering bad data.
