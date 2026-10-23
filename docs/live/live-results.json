@@ -1,0 +1,75 @@
+{
+  "url": "https://uber-eats-filter-e6lw.vercel.app/",
+  "first": {
+    "status": 200,
+    "finalUrl": "https://uber-eats-filter-e6lw.vercel.app/",
+    "cards": 40,
+    "count": "40 of 40 restaurants",
+    "hasPassword": 0
+  },
+  "rows": [
+    {
+      "file": "check-1",
+      "chips": [
+        "Vegetarian",
+        "30 min or less",
+        "$",
+        "$$"
+      ],
+      "expected": 9,
+      "live": 9,
+      "namesMatch": true,
+      "empty": ""
+    },
+    {
+      "file": "check-2",
+      "chips": [
+        "Vegetarian",
+        "30 min or less",
+        "$",
+        "$$",
+        "4.0+"
+      ],
+      "expected": 8,
+      "live": 8,
+      "namesMatch": true,
+      "empty": ""
+    },
+    {
+      "file": "check-3",
+      "chips": [
+        "Vegetarian",
+        "30 min or less"
+      ],
+      "expected": 11,
+      "live": 11,
+      "namesMatch": true,
+      "empty": ""
+    },
+    {
+      "file": "check-4",
+      "chips": [
+        "20 min or less",
+        "4.5+",
+        "$"
+      ],
+      "expected": 0,
+      "live": 0,
+      "namesMatch": true,
+      "empty": "No restaurants match 20 min or less, $ and 4.5+ right now. Try turning one filter off to see more places.",
+      "afterClearAll": 40
+    },
+    {
+      "file": "check-5-two-chips",
+      "chips": [
+        "Vegetarian",
+        "Gluten-free"
+      ],
+      "expected": 7,
+      "live": 7,
+      "namesMatch": true,
+      "empty": ""
+    }
+  ],
+  "reloadsDuringClicks": 0
+}

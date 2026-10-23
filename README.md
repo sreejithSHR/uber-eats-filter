@@ -7,6 +7,9 @@ A Next.js (App Router) + TypeScript page that renders the 40-restaurant Game-Day
 ## Checks
 - [Expected-results check table](checks/expected-results.md): four hand-worked filter stacks (plus a two-chip extra row) with names and counts, used to judge the filter code.
 - [Results vs expected](checks/results-vs-expected.md): each stack clicked on the page, with screenshots; all five counts match.
+- [Live demo checklist](checks/live-checklist.md): every stack re-checked on the live Vercel page in a private window.
+
+**Live demo:** https://uber-eats-filter-e6lw.vercel.app/
 
 ## Filter logic (`lib/filter.ts`)
 - `filterRestaurants(restaurants, filters)` is one pure function: it returns a new list and never edits the input.
