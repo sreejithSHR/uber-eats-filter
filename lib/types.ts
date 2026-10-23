@@ -23,13 +23,22 @@ export interface Restaurant {
   rating: number;
 }
 
+/** A list with at least one item, so "nothing picked" can only be expressed as null, never []. */
+export type NonEmptyList<T> = [T, ...T[]];
+
 /** The diner's filter choices. Each group is null when nothing is picked in it. */
 export interface FilterState {
   delivery: DeliveryLimit | null;
-  price: PriceBand[] | null;
-  dietary: DietaryTag[] | null;
+  price: NonEmptyList<PriceBand> | null;
+  dietary: NonEmptyList<DietaryTag> | null;
   rating: RatingMin | null;
 }
 
 /** Starting state: nothing selected in every group. */
 export const EMPTY_FILTERS: FilterState = { delivery: null, price: null, dietary: null, rating: null };
+
+/** Turn a chip list back into a group value: an empty list becomes null, so untapping the last chip clears the group. */
+export function toGroup<T>(items: T[]): NonEmptyList<T> | null {
+  const [first, ...rest] = items;
+  return first === undefined ? null : [first, ...rest];
+}

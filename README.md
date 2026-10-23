@@ -10,7 +10,7 @@ A Next.js (App Router) + TypeScript page that renders the 40-restaurant Game-Day
 
 ## Types (`lib/types.ts`)
 - `Restaurant`: one typed row. `priceBand` is `PriceBand = "$" | "$$" | "$$$" | "$$$$"`, mapped from `price_tier` 1-4, never a plain string.
-- `FilterState`: four groups (`delivery`, `price`, `dietary`, `rating`), each `null` when nothing is picked. `EMPTY_FILTERS` is the starting state.
+- `FilterState`: four groups (`delivery`, `price`, `dietary`, `rating`), each `null` when nothing is picked. Multi-pick groups use `NonEmptyList<T>`, so an empty list cannot compile; `toGroup()` turns an emptied chip list back into `null`. `EMPTY_FILTERS` is the starting state.
 - Strict TypeScript, with no type-check escape hatches anywhere in the project.
 
 ## Rule calls to note
