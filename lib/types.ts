@@ -4,7 +4,7 @@ export type PriceBand = "$" | "$$" | "$$$" | "$$$$";
 /** Dietary tags a diner can filter on. */
 export type DietaryTag = "vegetarian" | "vegan" | "glutenFree";
 
-/** Delivery-time chips, in minutes. A restaurant passes when delivery_time_min <= the limit. */
+/** Delivery-time chips, in minutes, labelled "20/30/45 min or less". A restaurant passes when delivery_time_min <= the limit, so exactly 30 passes the 30 chip. */
 export type DeliveryLimit = 20 | 30 | 45;
 
 /** Rating chips. A restaurant passes when rating >= the minimum. */

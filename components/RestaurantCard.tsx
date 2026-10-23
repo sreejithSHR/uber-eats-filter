@@ -9,8 +9,9 @@ function dietaryTags(r: Restaurant): string[] {
   return tags;
 }
 
-/** One restaurant card, as in the wireframe: no id on the card. */
+/** One restaurant card, as in the wireframe: no id on the card, and an explicit line when no dietary tag applies. */
 export function RestaurantCard({ restaurant: r }: { restaurant: Restaurant }) {
+  const tags = dietaryTags(r);
   return (
     <article className="rounded-xl border border-neutral-200 bg-white p-4">
       <h2 className="text-[15px] font-bold text-neutral-900">{r.name}</h2>
@@ -18,13 +19,17 @@ export function RestaurantCard({ restaurant: r }: { restaurant: Restaurant }) {
       <p className="mt-2 text-[13px] font-semibold text-neutral-900">
         {r.deliveryTimeMin} min · {r.priceBand} · ★ {r.rating.toFixed(1)}
       </p>
-      <ul className="mt-3 flex flex-wrap gap-1.5">
-        {dietaryTags(r).map((tag) => (
-          <li key={tag} className="rounded-full bg-emerald-50 px-2.5 py-1 text-[11.5px] font-semibold text-emerald-700">
-            {tag}
-          </li>
-        ))}
-      </ul>
+      {tags.length > 0 ? (
+        <ul className="mt-3 flex flex-wrap gap-1.5" aria-label="Dietary tags">
+          {tags.map((tag) => (
+            <li key={tag} className="rounded-full bg-emerald-50 px-2.5 py-1 text-[11.5px] font-semibold text-emerald-700">
+              {tag}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="mt-3 py-1 text-[12px] text-neutral-500">No dietary tags</p>
+      )}
     </article>
   );
 }

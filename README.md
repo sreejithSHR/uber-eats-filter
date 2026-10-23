@@ -15,7 +15,8 @@ A Next.js (App Router) + TypeScript page that renders the 40-restaurant Game-Day
 
 ## Rule calls to note
 - Vegan counts as vegetarian in the filter: three rows (Chiang Mai Noodle Bar, Sprout & Seed, Tofu Temple) are vegan but flagged not vegetarian. The data file is left untouched; this is a filter rule, and cards still show only the tags the data says yes to.
-- Delivery limits and rating minimums are inclusive: exactly 30 min passes Under 30; exactly 4.0 passes 4.0+.
+- Delivery limits and rating minimums are inclusive, and the chip names say so: the delivery chips read "20 / 30 / 45 min or less" (not "Under 30"), so Olive & Ember Mezze at exactly 30 min matches what the label promises; exactly 4.0 passes 4.0+.
+- Cards with no dietary flags (16 of 40, e.g. Smokestack Burger Co., Liberty Diner) show a "No dietary tags" line, so the slot reads as deliberate rather than broken.
 
 ## Run
 ```bash
