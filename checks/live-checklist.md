@@ -1,7 +1,8 @@
 # Live demo checklist: stackable restaurant filter
 
 **Live page:** https://uber-eats-filter-e6lw.vercel.app/
-**Checked:** in a fresh private browser window (Microsoft Edge, new profile, no cookies, not signed in to anything), against the page Vercel built from commit `7f62452` (Next.js 15.5.28).
+**Deployed commit checked:** [`a5531b2`](https://github.com/sreejithSHR/uber-eats-filter/commit/a5531b2) (Next.js 15.5.28). The page footer prints the commit Vercel built it from (`Build: a5531b2`, read from `VERCEL_GIT_COMMIT_SHA`), and that footer is visible in every screenshot below. Later commits that only change `checks/`, `docs/` or the README are skipped by Vercel (`vercel.json`), so the live page stays on this commit.
+**How the screenshots were taken:** [`scripts/live-check.js`](../scripts/live-check.js) opens the live URL in a brand-new Microsoft Edge browser context (no cookies, not signed in to anything, the same as a private window), taps each stack's chips, reads the count and every restaurant name, and saves a full-page screenshot plus [`live-results.json`](../docs/live/live-results.json). Re-run it with `node scripts/live-check.js https://uber-eats-filter-e6lw.vercel.app/ docs/live`.
 **How each row was checked:** clear all filters, tap the listed chips, then read the result count and every restaurant name on screen, and compare both with the [expected-results table](expected-results.md). No row needed a page reload; the list and count changed on each tap.
 
 ## First load
@@ -9,6 +10,7 @@
 | Check | Result |
 |---|---|
 | Opens with no login, account or gate | Yes. The link loads straight to the restaurant list (HTTP 200, no redirect, no password field). |
+| Which build is live | Footer reads **Build: a5531b2**. |
 | Shows every sample restaurant | Yes. **40 of 40 restaurants**, 40 cards on screen. ([screenshot](../docs/live/live-first-load.png)) |
 | Data source | `data/restaurants.csv`, committed in this repository and read at build time. Nothing is fetched from the web. |
 | Type safety | Production build passes with 0 TypeScript errors; the code has no type-check escape hatches. |

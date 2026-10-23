@@ -3,6 +3,7 @@
   "first": {
     "status": 200,
     "finalUrl": "https://uber-eats-filter-e6lw.vercel.app/",
+    "build": "Build: a5531b2",
     "cards": 40,
     "count": "40 of 40 restaurants",
     "hasPassword": 0
